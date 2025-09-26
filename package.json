@@ -1,14 +1,13 @@
 {
   "name": "carbon-credit-ledger",
   "version": "1.0.0",
-  "description": "Production-ready REST API for carbon credit ledger with PostgreSQL",
+  "description": "REST API for carbon credit ledger with PostgreSQL",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "nodemon server.js",
-    "migrate": "psql $DATABASE_URL -f schema.sql"
+    "dev": "nodemon server.js"
   },
-  "keywords": ["carbon-credits", "ledger", "blockchain", "api", "postgresql"],
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",

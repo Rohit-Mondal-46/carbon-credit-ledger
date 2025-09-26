@@ -1,7 +1,8 @@
 const dotenv = require('dotenv')
 const express = require('express');
-const db = require('./db');
 const recordsRouter = require('./routes/records');
+const pool = require('./config/db');
+const initSchema = require("./config/schema.js")
 dotenv.config();
 
 // Initializing app
@@ -22,17 +23,12 @@ app.get('/', (req, res) => {
 // routes
 app.use('/records', recordsRouter);
 
-
 const startServer = async () => {
     try {
-        console.log('Testing db connection...');
-        //db connection
-        const dbConnected = await db.testConnection();
-        
-        if (!dbConnected) {
-            throw new Error('Cannot connect to database');
-        }
-        
+        const client = await pool.connect();
+        console.log('Connected to the database');
+        client.release();
+        await initSchema();
         app.listen(PORT, () => {
             console.log(`server running on port ${PORT}`);
         });
