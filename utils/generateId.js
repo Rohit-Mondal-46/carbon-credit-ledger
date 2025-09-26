@@ -15,12 +15,6 @@ const generateDeterministicId = (record) => {
     
     // Generate SHA-256 hash as hex string
     const hash = crypto.createHash('sha256').update(canonical, 'utf8').digest('hex');
-    
-    console.log('Generated deterministic ID:', {
-        canonical,
-        id: hash
-    });
-    
     return hash;
 };
 
