@@ -1,6 +1,6 @@
 const Record = require('../models/Record');
 const Event = require('../models/Event');
-const {validateRecord} = require('../utils/validateRecord');
+const validateRecord = require('../utils/validateRecord');
 
 const createRecord = async (req, res) => {
     try {
