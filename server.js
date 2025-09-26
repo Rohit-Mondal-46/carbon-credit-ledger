@@ -1,6 +1,6 @@
 const dotenv = require('dotenv')
 const express = require('express');
-const recordsRouter = require('./routes/records');
+const recordsRouter = require('./routes/recordsRoutes.js');
 const pool = require('./config/db');
 const initSchema = require("./config/schema.js")
 dotenv.config();

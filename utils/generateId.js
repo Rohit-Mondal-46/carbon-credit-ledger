@@ -18,4 +18,4 @@ const generateDeterministicId = (record) => {
     return hash;
 };
 
-module.exports = {generateDeterministicId};
+module.exports = generateDeterministicId;

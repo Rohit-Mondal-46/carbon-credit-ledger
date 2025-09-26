@@ -1,4 +1,4 @@
-const {generateDeterministicId} = require('../utils/generateId');
+const generateDeterministicId = require('../utils/generateId');
 const pool = require('../config/db');
 const Event = require('./Event');
 

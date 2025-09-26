@@ -28,4 +28,4 @@ const validateRecord = (record) => {
     };
 };
 
-module.exports = {validateRecord};
+module.exports = validateRecord;
